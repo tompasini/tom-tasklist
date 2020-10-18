@@ -1,0 +1,18 @@
+body { min-height: 100vh; display: flex; flex-direction: column; }
+header{height: 13vh; } 
+main{flex-grow: 1;} 
+footer{height: 7vh;}
+
+.bg-gamer-1{
+background-color: #1c3144;
+}
+
+.card-bg-gamer-1{
+  background-color: #474747;
+}
+
+.btn-gamer{
+  background-color: #739b19;
+  color: rgb(253, 239, 239);
+  border: none;
+}
