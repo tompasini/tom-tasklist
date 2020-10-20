@@ -27,4 +27,8 @@ export default class TaskController {
       return
     }
   }
+
+  complete(id) {
+    taskService.complete(id)
+  }
 }

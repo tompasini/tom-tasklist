@@ -12,7 +12,6 @@ class ListService {
     let lists = ProxyState.lists
     lists.push(new List(rawList))
     ProxyState.lists = lists
-    console.log(ProxyState.lists)
   }
 
 

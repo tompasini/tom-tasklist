@@ -3,6 +3,18 @@ import Task from "../Models/Task.js"
 import { saveState } from "../Utils/LocalStorage.js"
 
 class TaskService {
+  complete(id) {
+    console.log("complete works!")
+    let tasks = ProxyState.tasks
+    let taskIndex = tasks.findIndex(t => t.id == id)
+    if (tasks[taskIndex].complete == false) {
+      tasks[taskIndex].complete = true
+    } else {
+      tasks[taskIndex].complete = false
+    }
+
+    ProxyState.tasks = tasks
+  }
 
   constructor() {
     console.log("hello from task service")

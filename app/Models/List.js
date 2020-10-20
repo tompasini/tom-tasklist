@@ -5,13 +5,14 @@ export default class List {
   constructor(data) {
     this.title = data.title
     this.id = data.id || generateId();
+    this.color = data.color
   }
 
 
   get Template() {
     return /*html*/ `
     <div class="col-md-3 mt-3">
-    <div class="card text-light card-bg-gamer-1 shadow-lg p-3 mb-5 rounded">
+    <div style = "background-color:${this.color}" class="card text-light card-bg-gamer-1 shadow-lg p-3 mb-5 rounded">
         <div class="card-body">
             <h2 class="card-title">${this.title}  <button class="btn-gamer close" onclick="app.listController.delete('${this.id}')"><span aria-hidden="true" >&times;</span></button></h2>
             <form onsubmit= "app.taskController.add('${this.id}')">

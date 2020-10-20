@@ -9,18 +9,21 @@
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/style/main.css">
     <link rel="stylesheet" href="assets/style/style.css">
+    <link href="//cdn.jsdelivr.net/npm/@sweetalert2/theme-dark@4/dark.css">
     <title>Tom's Taskmaster</title>
 </head>
 
 <body>
     <header class="container-fluid">
-        <div class="row bg-gamer-1 pb-4 pt-2">
+        <div class="row bg-gamer-1 pb-4 pt-2 text-light">
             <div class="col-12">
                 <form onsubmit="app.listController.add()">
 
                     <div class="form-group form-inline">
                         <input type="text" class="form-control" name="title" aria-describedby="helpId"
                             placeholder="Enter list name">
+                        <label for="listColor">Select a color:</label>
+                        <input type="color" name="listColor" id="listColor">
                     </div>
                     <button class="btn-gamer" type="submit">Create List</button>
                 </form>
@@ -40,7 +43,10 @@
         </div>
     </footer>
 
+
     <script src="app/main.js" type="module"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+
 </body>
 
 </html>
